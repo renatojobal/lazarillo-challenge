@@ -3,7 +3,7 @@ version: '3.4'
 
 services:
   client-angular:
-    image: algoritmofifo
+    image: lazarillochallenge
     container_name: project_container
     build: .
     command: ng serve --host 0.0.0.0
