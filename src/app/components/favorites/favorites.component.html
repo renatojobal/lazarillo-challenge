@@ -1,1 +1,7 @@
-<p>favorites works!</p>
+<ul class="list-group">
+    <li *ngFor="let place of place$ | async">
+    {{ place.name }}
+
+    </li>
+
+  </ul>
