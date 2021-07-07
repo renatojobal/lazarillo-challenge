@@ -44,3 +44,6 @@ testem.log
 .DS_Store
 Thumbs.db
 .firebase
+
+# Secret api keys
+src/environments/config.ts
