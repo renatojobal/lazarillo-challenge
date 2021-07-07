@@ -12,6 +12,7 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
 
 /* Reactive form services in Angular */
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MapComponent } from './components/map/map.component';
 
 
 
@@ -19,7 +20,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     FormComponent,
-    FavoritesComponent
+    FavoritesComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
