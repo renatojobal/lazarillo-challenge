@@ -19,7 +19,7 @@ export class PlaceService {
   getPlaceList(){
     return this.angularFirestore
     .collection("place-collection")
-    .snapshotChanges();
+    .valueChanges();
   }
 
   createPlace(place: Place){
