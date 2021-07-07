@@ -1,7 +1,9 @@
 <ul class="list-group">
-    <li *ngFor="let place of place$ | async">
+  <li
+    class="list-group-item"
+    *ngFor="let place of place$ | async"
+    (click)="onItemClicked(place)"
+  >
     {{ place.name }}
-
-    </li>
-
-  </ul>
+  </li>
+</ul>
