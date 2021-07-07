@@ -1,0 +1,12 @@
+// Edit this file name to 'config.ts' and add the config keys
+// from your firebase project
+
+export const firebaseConfig = {
+    apiKey: YOUR_INFO_HERE,
+    authDomain: YOUR_INFO_HERE",
+    databaseURL: YOUR_INFO_HERE,
+    projectId: YOUR_INFO_HERE,
+    storageBucket: YOUR_INFO_HERE,
+    messagingSenderId: YOUR_INFO_HERE,
+    appId: YOUR_INFO_HERE
+}
