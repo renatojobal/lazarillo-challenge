@@ -1,8 +1,8 @@
 export type Place = {
     id: string,
     name: string,
-    latitude: string,
-    longitude: string,
+    latitude: number,
+    longitude: number,
     topLeftCornerBox: string,
     topRightConerBox: string,
     bottomLeftCornerBox: string,
