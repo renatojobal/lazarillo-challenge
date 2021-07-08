@@ -63,14 +63,14 @@
       <app-form></app-form>
     </div>
     <div class="col-6">
-      <app-favorites></app-favorites>
+      <app-favorites (changedPlaceEvent)="receivePlace($event)"></app-favorites>
     </div>
 
 
   </div>
   <div class="row">
     <div class="col">
-      <app-map></app-map>
+      <app-map [selectedPlace]="selectedPlace"></app-map>
     </div>
   </div>
 

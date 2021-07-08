@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Place } from './models/place.model';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'lazarillo-challenge';
+
+
+  selectedPlace = {} as Place;
+
+
+  receivePlace($event : Place){
+    console.log("Getting the selected place")
+    this.selectedPlace = $event
+  }
+
 }

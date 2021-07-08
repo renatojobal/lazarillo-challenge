@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { PlaceService } from 'src/app/services/place.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Place } from 'src/app/models/place.model';
+
 
 @Component({
   selector: 'app-favorites',
@@ -24,9 +25,11 @@ export class FavoritesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  @Output() changedPlaceEvent = new EventEmitter<Place>();
+
   onItemClicked(place: Place){
       console.log("Item clicked "+place.name)
-
+      this.changedPlaceEvent.emit(place)
   }
   
 
