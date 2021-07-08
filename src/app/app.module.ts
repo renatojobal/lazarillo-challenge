@@ -13,6 +13,7 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
 /* Reactive form services in Angular */
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MapComponent } from './components/map/map.component';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 
 
@@ -29,7 +30,8 @@ import { MapComponent } from './components/map/map.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LeafletModule
   ],
   providers: [],
   bootstrap: [AppComponent]
