@@ -1,12 +1,12 @@
 FROM node:16
 
-# Puerto entorno dev
+# Port entorno dev
 EXPOSE 4200
-# Puerto livereload
+# Port livereload
 EXPOSE 49153
-# Puerto Test
+# Port Test
 EXPOSE 9876
-# Puerto e2e
+# Port e2e
 EXPOSE 49152 
 
 RUN apt-get update
@@ -17,5 +17,5 @@ WORKDIR /project
 
 COPY . .
 
-# Instalamos angular cli en nuestra imágen
+# Install angular client
 RUN npm install -g @angular/cli@12
