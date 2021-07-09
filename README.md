@@ -1,11 +1,11 @@
-# LazarilloChallenge
+# LazarilloChallenge :fire:
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
 Low fidelity Mockups :art: https://www.figma.com/file/LDIhDoHnDrAGf4ZqPa52Ho/Bootstrap-Lazarillo?node-id=1%3A804
 
 See the live demo at: https://lazarillo-challenge.web.app
 
-# Build project
+# Build the project
 
 ## 1. Create firebase project
 
@@ -46,8 +46,24 @@ See the live demo at: https://lazarillo-challenge.web.app
 ![image](https://user-images.githubusercontent.com/35740463/125143989-0c635800-e0e2-11eb-9a42-f851b7515ae9.png)
 
 
-## 3. (Using docker-compose) Raise Angular Client
+## 3. (Using just your local machine) Raise Angular Client
 
+- Go to the root folder
+- Install angular:
+```
+npm install -g @angular/cli
+```
+- Install dependencies:
+```
+npm install
+```
+Then run the project:
+```
+ng serve -o
+```
+
+## 3. Or (Using docker-compose) Raise Angular Client
+> You brave soul
 - Clone the repository
 
 - You must build the image, for this go to the root folder of the project and there write:
@@ -66,5 +82,6 @@ docker-compose up
 
 Note: To stop the client press the keys `Ctrl + C` 
 
-## 3. (Using just your local machine) Raise Angular Clien
+
+At the end the project should be running on http://localhost:4200
 
