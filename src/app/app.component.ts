@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { icon, latLng, marker } from 'leaflet';
 import { Place } from './models/place.model';
 
 @Component({
@@ -12,10 +13,15 @@ export class AppComponent {
 
   selectedPlace = {} as Place;
 
+  mapCenter = latLng(0, 0)
+
 
   receivePlace($event : Place){
     console.log("Getting the selected place")
-    this.selectedPlace = $event
+
+    // Update the values to the map component
+    this.selectedPlace = $event 
+    this.mapCenter = latLng($event.latitude, $event.longitude)
   }
 
 }
