@@ -5,8 +5,13 @@ Low fidelity Mockups :art: https://www.figma.com/file/LDIhDoHnDrAGf4ZqPa52Ho/Boo
 
 See the live demo at: https://lazarillo-challenge.web.app
 
-  
-## Raise Angular Client Using Docker
+# Build project
+
+## 1. Create firebase project
+
+## 3. (Using just your local machine) Raise Angular Clien
+
+## 2. (Using docker-compose) Raise Angular Client
 
 1. Clone the repository
 
