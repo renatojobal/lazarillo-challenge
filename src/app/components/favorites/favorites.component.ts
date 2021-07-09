@@ -13,23 +13,32 @@ import { Place } from 'src/app/models/place.model';
 })
 export class FavoritesComponent implements OnInit {
 
+  // List of places
   place$: Observable<any[]>
 
   constructor(
     public placeService: PlaceService,
   ) { 
-    this.place$ = placeService.getPlaceList();
+    // Update the list of places from firebase
+    this.place$ = placeService.getPlaceList(); 
   }
-
 
   ngOnInit(): void {
   }
 
+  // Element to change the color of the item in the list 
+  // if it is selected
+  selectedPlace = {} as Place;
+
+  // Event emitter
   @Output() changedPlaceEvent = new EventEmitter<Place>();
 
   onItemClicked(place: Place){
       console.log("Item clicked "+place.name)
-      this.changedPlaceEvent.emit(place)
+
+      this.changedPlaceEvent.emit(place) // Emit the selected place to app component
+
+      this.selectedPlace = place; // Update selected place to change its color
   }
   
 

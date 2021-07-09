@@ -1,8 +1,9 @@
 <ul class="list-group">
   <li
     class="list-group-item"
-    *ngFor="let place of place$ | async"
+    [ngClass]="{'active': selectedPlace.name == place.name}"
     (click)="onItemClicked(place)"
+    *ngFor="let place of place$ | async"
   >
     {{ place.name }}
   </li>
