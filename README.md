@@ -26,26 +26,45 @@ See the live demo at: https://lazarillo-challenge.web.app
 ![image](https://user-images.githubusercontent.com/35740463/125143667-ebe6ce00-e0e0-11eb-9f76-f09019853655.png)
 ![image](https://user-images.githubusercontent.com/35740463/125143673-f1441880-e0e0-11eb-8f66-9ec509848fb0.png)
 
+## 2. Clone the project
+- Clone the project.
+- Open the file `src/enviroments/config.ts.backup` in a text editor
+![image](https://user-images.githubusercontent.com/35740463/125143823-86471180-e0e1-11eb-84b9-ff498259af15.png)
+- To file the info go to the project created on Firebase
+- Add a web app to the project
+![image](https://user-images.githubusercontent.com/35740463/125143898-c1e1db80-e0e1-11eb-8812-a344963a67e8.png)
+- Write any name to the web app
+![image](https://user-images.githubusercontent.com/35740463/125143920-d32ae800-e0e1-11eb-9c05-420f0d7bc245.png)
 
-## 2. (Using docker-compose) Raise Angular Client
+- Now copy the configuration and paste into the file `src/enviroments/config.ts.backup`.
+![image](https://user-images.githubusercontent.com/35740463/125143946-e8077b80-e0e1-11eb-894c-4412612ea119.png)
 
-1. Clone the repository
 
-2. You must build the image, for this go to the root folder of the project and there write:
+![image](https://user-images.githubusercontent.com/35740463/125143974-01102c80-e0e2-11eb-97f5-3a0efdeb1cd3.png)
+
+- Save the file and rename it form `config.ts.backup` to `config.ts`
+![image](https://user-images.githubusercontent.com/35740463/125143989-0c635800-e0e2-11eb-9a42-f851b7515ae9.png)
+
+
+## 3. (Using docker-compose) Raise Angular Client
+
+- Clone the repository
+
+- You must build the image, for this go to the root folder of the project and there write:
 
 ```
 docker-compose build
 ```
-3. This image has not yet installed the dependencies, to install them enter the command:
+- This image has not yet installed the dependencies, to install them enter the command:
 ```
 docker-compose run client-angular npm install --yes
 ```
-4. Now if you can simply write the following command to lift the project
+- Now if you can simply write the following command to lift the project
 ```
 docker-compose up
 ```
 
 Note: To stop the client press the keys `Ctrl + C` 
 
-## 2. (Using just your local machine) Raise Angular Clien
+## 3. (Using just your local machine) Raise Angular Clien
 
