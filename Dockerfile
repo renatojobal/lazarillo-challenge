@@ -17,9 +17,5 @@ WORKDIR /project
 
 COPY . .
 
-RUN ls -al
-
 # Instalamos angular cli en nuestra imágen
 RUN npm install -g @angular/cli@8
-
-RUN npm install --yes
