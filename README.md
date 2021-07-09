@@ -1,27 +1,30 @@
 # LazarilloChallenge
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
+Low fidelity Mockups :art: : 
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FLDIhDoHnDrAGf4ZqPa52Ho%2FBootstrap-Lazarillo%3Fnode-id%3D1%253A804" allowfullscreen></iframe>
 
-## Development server
+See the live demo at: https://lazarillo-challenge.web.app
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+  
+## Raise Angular Client Using Docker
 
-## Code scaffolding
+1. Clone the repository
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. You must build the image, for this go to the root folder of the project and there write:
 
-## Build
+```
+docker-compose build
+```
+3. This image has not yet installed the dependencies, to install them enter the command:
+```
+docker-compose run client-angular npm install --yes
+```
+4. Now if you can simply write the following command to lift the project
+```
+docker-compose up
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Note: To stop the client press the keys `Ctrl + C` 
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
