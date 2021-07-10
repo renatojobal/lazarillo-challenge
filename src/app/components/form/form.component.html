@@ -1,12 +1,49 @@
-<form [formGroup]="placeForm" (ngSubmit)="onSubmit()" novalidate>
-  <div class="mb-3">
-    <label>Nombre</label>
-    <input type="text" formControlName="name" class="form-control" required />
+<h3>Buscar lugares</h3>
+<form [formGroup]="geoPointForm" (ngSubmit)="onSubmit()" novalidate>
+  <label>Por coordenadas</label>
+  <div class="input-group mb-3">
+    <span class="input-group-text">Latitud: </span>
+    <input
+      type="number"
+      class="form-control"
+      placeholder=""
+      aria-label="latitude"
+      id="latitude"
+      ng-control="latitude"
+    />
+    <span class="input-group-text">Longitud: </span>
+    <input
+      type="number"
+      class="form-control"
+      placeholder=""
+      aria-label="longitude"
+      id="longitude"
+      ng-control="longitude"
+    />
   </div>
 
   <div class="mb-3">
-    <button type="submit" class="btn btn-primary" [disabled]="!placeForm.valid">
-      Create
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="!geoPointForm.valid"
+    >
+      Buscar
     </button>
   </div>
+</form>
+<form>
+  <label>O busca un lugar popular</label>
+  <select
+    [ngModel]="selectedPopularPlace"
+    (ngModelChange)="onPopularPlaceSelected($event)"
+    name="popularPlaceForm"
+    class="form-select"
+    aria-label="Popular place"
+    cahnge="onPopularPlaceSelected(place)"
+  >
+    <option *ngFor="let place of popularPlace$ | async" [ngValue]="place">
+      {{ place.name }}
+    </option>
+  </select>
 </form>
