@@ -22,16 +22,16 @@ export class PlaceService {
     .valueChanges();
   }
 
-  getPlaceList(){
+  getFavoritePlaceList(){
     return this.angularFirestore
-    .collection("place-collection")
+    .collection("favorite-collection")
     .valueChanges();
   }
 
-  createPlace(place: Place){
+  addFavoritePlace(place: Place){
     return new Promise<any>((resolve, reject) => {
       this.angularFirestore
-      .collection("place-collection")
+      .collection("favorite-collection")
       .add(place)
       .then(response => { console.log(response) }, error => reject(error))
     });

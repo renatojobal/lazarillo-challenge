@@ -20,7 +20,7 @@ export class FavoritesComponent implements OnInit {
     public placeService: PlaceService,
   ) { 
     // Update the list of places from firebase
-    this.place$ = placeService.getPlaceList(); 
+    this.place$ = placeService.getFavoritePlaceList(); 
   }
 
   ngOnInit(): void {
