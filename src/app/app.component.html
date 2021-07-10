@@ -34,7 +34,10 @@
 <!-- Include the components here 👐 -->
 <div class="container">
   <div class="row">
-    <div class="col-6">
+    <div class="card col-6">
+      <app-form (changedPlaceEvent)="receivePlace($event)"></app-form>
+    </div>
+    <div class="card col-6">
       <app-favorites (changedPlaceEvent)="receivePlace($event)"></app-favorites>
     </div>
   </div>
