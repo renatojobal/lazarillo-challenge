@@ -14,6 +14,7 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MapComponent } from './components/map/map.component';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { DetailsComponent } from './components/details/details.component';
 
 
 
@@ -22,7 +23,8 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
     AppComponent,
     FormComponent,
     FavoritesComponent,
-    MapComponent
+    MapComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
