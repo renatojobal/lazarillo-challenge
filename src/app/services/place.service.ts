@@ -16,6 +16,12 @@ export class PlaceService {
     .valueChanges()
   }
 
+  getPopularPlaceList(){
+    return this.angularFirestore
+    .collection("place-collection")
+    .valueChanges();
+  }
+
   getPlaceList(){
     return this.angularFirestore
     .collection("place-collection")
