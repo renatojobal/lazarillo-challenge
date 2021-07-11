@@ -85,3 +85,4 @@ Note: To stop the client press the keys `Ctrl + C`
 
 At the end the project should be running on http://localhost:4200
 
+> Thanks ;)
