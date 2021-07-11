@@ -1,8 +1,8 @@
-<h3>Buscar lugares</h3>
+<h3>Search place</h3>
 <form [formGroup]="geoPointForm" (ngSubmit)="onSubmit()" novalidate>
-  <label>Por coordenadas</label>
+  <label>By coordinates</label>
   <div class="input-group mb-3">
-    <span class="input-group-text">Latitud: </span>
+    <span class="input-group-text">Latitude: </span>
     <input
       type="number"
       class="form-control"
@@ -13,7 +13,7 @@
       id="latitude"
       ng-control="latitude"
     />
-    <span class="input-group-text">Longitud: </span>
+    <span class="input-group-text">Longitude: </span>
     <input
       type="number"
       class="form-control"
@@ -32,12 +32,12 @@
       class="btn btn-primary"
       [disabled]="!geoPointForm.valid"
     >
-      Buscar
+      Search
     </button>
   </div>
 </form>
 <form>
-  <label>O busca un lugar popular</label>
+  <label>Or search a popular place</label>
   <select
     [ngModel]="selectedPopularPlace"
     (ngModelChange)="onPopularPlaceSelected($event)"
