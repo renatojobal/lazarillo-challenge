@@ -12,7 +12,7 @@ export class DetailsComponent implements OnInit {
   tags = undefined
   elements = undefined
   constructor(private placeService: PlaceService) {
-    
+
 
 
   }
@@ -21,10 +21,19 @@ export class DetailsComponent implements OnInit {
     this.placeService.getInfoFeature(this.selectedPlace.type, this.selectedPlace.featureId).subscribe((res)=>{
       this.elements = res.elements
       this.tags = res.elements[0].tags
-      console.log(res.elements[0].tags);
-    });      
+      console.log("Tags"+res.elements[0].tags);
+    });   
  
 
+  }
+
+  ngOnChanges(): void {
+    this.placeService.getInfoFeature(this.selectedPlace.type, this.selectedPlace.featureId).subscribe((res)=>{
+      this.elements = res.elements
+      this.tags = res.elements[0].tags
+      console.log("Tags"+res.elements[0].tags);
+    });   
+ 
   }
 
   @Input() selectedPlace = {} as Place;
