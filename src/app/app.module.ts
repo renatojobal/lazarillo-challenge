@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { FormComponent } from './components/form/form.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { environment } from 'src/environments/environment';
+import { HttpClientModule } from '@angular/common/http';
 
 /* Firebase */
 import { AngularFireModule } from '@angular/fire';
@@ -33,7 +34,8 @@ import { DetailsComponent } from './components/details/details.component';
     AngularFirestoreModule,
     FormsModule,
     ReactiveFormsModule,
-    LeafletModule
+    LeafletModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

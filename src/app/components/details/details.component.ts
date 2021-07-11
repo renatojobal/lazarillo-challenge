@@ -9,11 +9,27 @@ import { PlaceService } from 'src/app/services/place.service';
 })
 export class DetailsComponent implements OnInit {
   
-  constructor(public placeService: PlaceService) {}
+  tags = undefined
+  elements = undefined
+  constructor(private placeService: PlaceService) {
+    
 
-  ngOnInit(): void {}
+
+  }
+
+  ngOnInit(): void {
+    this.placeService.getInfoFeature("node", 5864544802).subscribe((res)=>{
+      this.elements = res.elements
+      this.tags = res.elements[0].tags
+      console.log(res.elements[0].tags);
+    });      
+ 
+
+  }
 
   @Input() selectedPlace = {} as Place;
+
+
 
   addToFavorites() {
     console.log('Add to favorites the current place');

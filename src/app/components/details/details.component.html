@@ -1,4 +1,7 @@
 <h3>Detalles</h3>
+<div *ngFor="let item of tags | keyvalue">
+    {{item.key}} : {{item.value}}
+  </div>
 <button
 type="submit"
 class="btn btn-primary"
