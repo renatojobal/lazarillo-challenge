@@ -18,7 +18,7 @@ export class DetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.placeService.getInfoFeature("node", 5864544802).subscribe((res)=>{
+    this.placeService.getInfoFeature(this.selectedPlace.type, this.selectedPlace.featureId).subscribe((res)=>{
       this.elements = res.elements
       this.tags = res.elements[0].tags
       console.log(res.elements[0].tags);

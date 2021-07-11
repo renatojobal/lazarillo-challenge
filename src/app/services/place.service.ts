@@ -64,7 +64,7 @@ export class PlaceService {
 
 
 
-  getInfoFeature(type: string, id: number) {
+  getInfoFeature(type: string, id: string) {
     return this.http.get<any>(
       `https://api.openstreetmap.org/api/0.6/${type}/${id}.json`
     );
