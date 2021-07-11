@@ -30,6 +30,13 @@ export class PlaceService {
   }
 
   addFavoritePlace(place: Place) {
+
+    if(place.name == "" || place.name == undefined){
+      console.log("Place without name"+place.name)
+      place.name = `${place.latitude}, ${place.longitude}`
+    }
+    console.log("Final place name"+place.name)
+
     return new Promise<any>((resolve, reject) => {
       this.angularFirestore
         .collection('favorite-collection')
@@ -54,6 +61,8 @@ export class PlaceService {
       bottomRightCornerBox: place.bottomRightCornerBox,
     });
   }
+
+
 
   getInfoFeature(type: string, id: number) {
     return this.http.get<any>(

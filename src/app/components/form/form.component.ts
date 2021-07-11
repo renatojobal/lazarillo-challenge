@@ -29,8 +29,8 @@ export class FormComponent implements OnInit {
     public router: Router
   ) {
     this.geoPointForm = this.formBuilder.group({
-      "latitude": [""],
-      "longitude": [""]
+      "latitude": new FormControl(''),
+      "longitude": new FormControl('')
     });
 
     // Update the list of places from firebase
@@ -44,6 +44,15 @@ export class FormComponent implements OnInit {
 
   onSubmit() {
     console.log('Searching by lat and long'+this.geoPointForm.value);
+    console.log(""+this.geoPointForm.controls.latitude.value)
+
+    // Create place object
+
+    let targetPlace = {
+      latitude : this.geoPointForm.controls.latitude.value,
+      longitude : this.geoPointForm.controls.longitude.value
+    }
+
 
     this.changedPlaceEvent.emit(this.geoPointForm.value); // Emit the selected place to app component
   }
